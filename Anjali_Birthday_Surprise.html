@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#6b1b96"><title>For Anjali 💌</title>
+<style>
+*{box-sizing:border-box}body{margin:0;min-height:100svh;overflow-x:hidden;font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:#fff;background:radial-gradient(ellipse at 50% 10%,#a947d6,#5b168e 55%,#260943);display:grid;place-items:center;padding:22px}
+main{width:min(100%,480px);text-align:center;position:relative;z-index:2}h1{font-size:clamp(1.9rem,7vw,2.8rem);margin:0 0 8px;text-shadow:0 4px 20px #21052f}#intro{margin:0 0 18px;color:#ffe6fb}
+.stage{height:330px;display:grid;place-items:center;position:relative;perspective:1000px;cursor:pointer;touch-action:manipulation;outline:none}.stage:focus-visible{outline:3px solid white;border-radius:22px}
+.envelope{position:relative;width:min(84vw,330px);height:205px;filter:drop-shadow(0 18px 18px #20033377);transition:transform .4s}.body{position:absolute;inset:0;background:linear-gradient(145deg,#ff6db0,#f21c78);border-radius:8px 8px 16px 16px;overflow:hidden}.body:before,.body:after{content:"";position:absolute;bottom:0;width:0;height:0;border-style:solid}.body:before{left:0;border-width:0 0 205px 165px;border-color:transparent transparent #ff91c5 transparent}.body:after{right:0;border-width:205px 0 0 165px;border-color:transparent transparent transparent #e92179}
+.flap{position:absolute;z-index:4;top:0;left:0;width:0;height:0;border-left:165px solid transparent;border-right:165px solid transparent;border-top:125px solid #ffb1d5;transform-origin:top;transition:transform .85s cubic-bezier(.2,.75,.25,1);filter:drop-shadow(0 4px 2px #b72a6a33)}
+.seal{position:absolute;z-index:6;left:50%;top:83px;transform:translateX(-50%);font-size:36px;transition:opacity .3s,transform .4s}
+.letter{position:absolute;z-index:3;left:5%;width:90%;height:174px;bottom:10px;border-radius:10px;background:#fff9e9;color:#662568;padding:18px 14px;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 4px 12px #8b245366;transition:transform 1s cubic-bezier(.18,.8,.25,1),height 1s,bottom 1s}
+.letter small{font-weight:800;letter-spacing:.15em;color:#d32f86}.letter strong{font-family:Georgia,serif;font-size:clamp(1.4rem,6vw,2rem);color:#d62780;margin:8px 0}.letter span{font-size:1.7rem}
+.stage.opened .flap{transform:rotateX(180deg);z-index:1}.stage.opened .seal{opacity:0;transform:translateX(-50%) scale(.3)}.stage.opened .letter{height:300px;bottom:30px;transform:translateY(-75px);z-index:7}
+.hint{font-weight:800;background:#ffe45f;color:#65207d;padding:12px 20px;border-radius:999px;display:inline-block;box-shadow:0 5px 0 #c99a26;animation:bob 1.3s infinite}
+@keyframes bob{50%{transform:translateY(-6px)}}
+.wish{display:none;background:#fff9ee;color:#63236e;border-radius:22px;border:3px solid #ffe45f;padding:22px 20px;margin:10px 0 0;box-shadow:0 12px 36px #21053666;animation:rise .8s cubic-bezier(.2,1.2,.3,1)}.wish.show{display:block}.wish h2{font-family:Georgia,serif;font-size:clamp(2rem,8vw,2.8rem);color:#ed2782;margin:2px 0 12px}.wish p{font-size:1.05rem;line-height:1.65;margin:9px 0}.sign{font-weight:800;color:#8338c9;margin-top:14px}
+@keyframes rise{from{opacity:0;transform:translateY(35px) scale(.85)}to{opacity:1;transform:translateY(0) scale(1)}}
+.party{position:fixed;top:-35px;z-index:10;pointer-events:none;animation:fall linear forwards}@keyframes fall{to{transform:translate(var(--dx),110svh) rotate(800deg);opacity:.9}}
+.balloons{position:fixed;bottom:-100px;z-index:1;font-size:48px;animation:up 5s ease-out forwards;pointer-events:none}@keyframes up{to{transform:translateY(-120svh) rotate(20deg);opacity:0}}
+.btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:15px}button{border:0;border-radius:999px;padding:12px 17px;font-size:1rem;font-weight:800;cursor:pointer}.share{background:linear-gradient(90deg,#ff388a,#8f39ff);color:#fff}.again{background:#ffe45f;color:#63236e}.foot{font-size:.8rem;color:#f9dafa;margin-top:18px}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style></head>
+<body><main>
+<h1>Hey, Anjali! 💖</h1><p id="intro">A little envelope holds a big birthday surprise…</p>
+<div class="stage" id="stage" role="button" tabindex="0" aria-label="Tap to open the birthday envelope">
+ <div class="envelope">
+  <div class="body"></div>
+  <div class="letter" aria-hidden="true"><small>A SPECIAL NOTE FOR</small><strong>Anjali 💗</strong><span>🎂 ✨ 🎁</span></div>
+  <div class="flap"></div><div class="seal">💌</div>
+ </div>
+</div>
+<div class="hint" id="hint">👆 TAP TO OPEN YOUR SURPRISE</div>
+<section class="wish" id="wish" aria-live="polite">
+ <div style="font-size:2rem">🎉 🎈 🥳 🎈 🎉</div><h2>Happy Birthday, Anjali!</h2>
+ <p>Wishing you a day as lovely and special as you are. May your life be filled with <b>happiness, laughter, love and beautiful surprises.</b> 💕</p>
+ <p>May all your dreams find their wings, your smile never fade, and this new year of life bring you countless reasons to celebrate. Keep shining, today and always! 🌸✨</p>
+ <div style="font-size:2rem">🎂 💝 🎊</div><div class="sign">Sending you lots of love and warm wishes! 💖</div>
+ <div class="btns"><button class="share" id="share">💌 Share birthday wish</button><button class="again" id="again">↻ Close & replay</button></div>
+</section><p class="foot">A tiny surprise, made just for you ✨</p>
+</main>
+<script>
+const stage=document.getElementById('stage'),wish=document.getElementById('wish'),hint=document.getElementById('hint');let opened=false;
+function party(n=130){const colors=['#ff3186','#ffe45f','#4eeaff','#a6ff80','#bb7aff','#fff'];for(let i=0;i<n;i++){let x=document.createElement('i');x.className='party';x.style.left=Math.random()*100+'vw';x.style.background=colors[Math.floor(Math.random()*colors.length)];x.style.width=5+Math.random()*9+'px';x.style.height=10+Math.random()*13+'px';x.style.borderRadius=Math.random()>.5?'50%':'2px';x.style.setProperty('--dx',(Math.random()-.5)*240+'px');x.style.animationDuration=2.5+Math.random()*3+'s';x.style.animationDelay=Math.random()*.5+'s';document.body.appendChild(x);setTimeout(()=>x.remove(),6500)}for(let i=0;i<8;i++){let b=document.createElement('div');b.className='balloons';b.textContent=['🎈','💖','🎉'][i%3];b.style.left=Math.random()*95+'vw';b.style.animationDelay=Math.random()*.8+'s';document.body.appendChild(b);setTimeout(()=>b.remove(),6000)}}
+function openIt(){if(opened)return;opened=true;stage.classList.add('opened');hint.textContent='🎉 YOUR SURPRISE IS HERE! 🎉';document.getElementById('intro').textContent='A birthday wish, wrapped with love 💝';setTimeout(()=>{wish.classList.add('show');party();setTimeout(()=>party(65),900);setTimeout(()=>wish.scrollIntoView({behavior:'smooth',block:'center'}),200)},650);if(navigator.vibrate)navigator.vibrate([40,30,70])}
+stage.addEventListener('click',openIt);stage.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openIt()}});
+document.getElementById('again').addEventListener('click',()=>{opened=false;stage.classList.remove('opened');wish.classList.remove('show');hint.textContent='👆 TAP TO OPEN YOUR SURPRISE';document.getElementById('intro').textContent='A little envelope holds a big birthday surprise…';window.scrollTo({top:0,behavior:'smooth'})});
+document.getElementById('share').addEventListener('click',async()=>{const text='🎂💖 Happy Birthday, Anjali! Wishing you a day filled with happiness, laughter, love and beautiful surprises. May all your dreams come true. Keep shining, today and always! 🎉✨';if(navigator.share){try{await navigator.share({title:'Happy Birthday, Anjali! 💖',text})}catch(e){}}else{try{await navigator.clipboard.writeText(text);alert('Birthday wish copied! Paste it into WhatsApp or Instagram.')}catch(e){prompt('Copy and share this wish:',text)}}});
+</script></body></html>
